@@ -285,7 +285,7 @@ app.get("/download/*path", async (req, res) => {
 res.send(data);
 });
 
-})
+
 
 
 const port = process.env.PORT || 3000;
