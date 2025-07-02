@@ -1,0 +1,49 @@
+<h1>Welcome <%= user.username %></h1>
+
+<h1>Upload to the current folder</h1>
+<form id="fileupl" method="post" enctype="multipart/form-data">
+  <input type="file" name="upl" id="upl" />
+  <button type="submit">Upload</button>
+</form>
+
+<form id="createform" method="post">
+  <input type="text" placeholder="Enter a folder Name" name="fn" />
+  <button type="submit">Create</button>
+</form>
+<script>
+  const currenturl = window.location.pathname;
+  document.getElementById("createform").action = "/create" + currenturl;
+  document.getElementById("fileupl").action = currenturl;
+</script>
+
+<h4>Current Directory: <%= currentPath %></h4>
+
+<a href="<%= backpath %>">GO BACK</a>
+
+<h5>Folders</h5>
+<ul>
+  
+  <% if (folders && folders.length) { folders.forEach(folder=> { %>
+  <li>
+    <a href="<%=folder.folderpath.replace(/^.*?\.com/, '')%>"><%=folder.foldername%></a> Created
+    at: <%=folder.date%>
+  </li>
+  <% }) } else { %>
+    <li>No folders found.</li>
+  <% } %>
+</ul>
+
+<h5>Files</h5>
+<ul>
+  
+  <% if (file && file.length) { file.forEach(fil=> { %>
+  <li>
+    <%=fil.filename%> Created at: <%=fil.date%>  <form action="/download/<%=fil.path%>" method="get">
+      <button type="submit">Download</button>
+    </form>
+    
+  </li>
+  <% }) } else { %>
+    <li>No files found.</li>
+  <% } %>
+</ul> 

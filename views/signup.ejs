@@ -1,0 +1,15 @@
+<h1>Signup</h1>
+
+<form action="/signup" method="post">
+<input type="text" placeholder="Name" placeholder="user" id="username" name="username">
+<input type="text" placeholder="Email" id="email" name="email">
+<input type="text" placeholder="password" id="password" name="password">
+<input type="text" placeholder="Confirm Password" id="confirmpass" name="confirmpass">
+<button type="submit">Signup</button>
+</form>
+
+<% if (typeof error !== 'undefined' && error.length) { %>
+  <script>
+    alert("<%= error.map(e => e.msg).join('\\n') %>")
+  </script>
+<% } %>
