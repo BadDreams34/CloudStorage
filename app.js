@@ -283,9 +283,9 @@ app.get("/download/*path", async (req, res) => {
 
 res.send(data);
 });
-
-app.listen(443, () => {
-  console.log(4000);
+const port = process.env.PORT || 3000;
+app.listen(port, () => {
+  console.log(port);
 }).on('error', (err)=>{
     console.error('error', err.message)
 });
