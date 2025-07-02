@@ -5,7 +5,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "startd": "nodemon script.ts",
-    "start": "npx prisma generate"
+    "start": "npx db push"
   },
   "keywords": [],
   "author": "",
