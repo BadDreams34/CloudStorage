@@ -1,14 +1,31 @@
-A simple CloudStorage App made with Nodejs which uses express , passport for authentiation and postgresql along with Prisma for Database queries which uses Supabase Storage 
-under the hood.
+#CloudStorage
+A simple CloudStorage App made with NodeJS and Vanilla JS.
 
-**Usage**
-Its live on railway deployed at : https://cloudstorage-production-59d8.up.railway.app/
+##Demo
+https://drive.google.com/file/d/1mx6HYfoSzWR-jeFHU-YsckYuHHqMu9Yq/view
 
-if u want to locally use it :
-- Download this source code as a zip file.
-- run npm install in your terminal and make sure to setup prisma.
-- create a .env file on your root folder and save Keys DATABASE_URL AND SUPABASE_KEY respectively from the services.
-- after settting up run node app.js and app will starting listening to *Port*.
+##Functionality
+- user can create an account and upload files.
+- can create nested folders and all data will be stored under his account.
+- Data can be downloaded at any point of time in future.
 
-Support: 
+##Features
+- Uses ExpressJS frameworks for API.
+- Utilize session based authentiation with PassportJS.
+- PostreSQL for database and Prisma for simplifying queries.
+- Uses Supabase Storage to store data under the hood
+
+##Usage
+if u want to locally use it:
+- Clone this repository.
+- create a .env file on your root folder and save Keys `DATABASE_URL` AND `SUPABASE_KEY` respectively.
+  ```
+  \\example .env
+  \\ Change values of Keys accordingly
+  DATABASE_URL= "postgresql://sdafasfasd@localhost:5432/dsafasdfdasf?schema=public"
+  ```
+- Run `npm run setup` to install required packages and Setup prisma.
+- After settting up run `npm run start` and app will starting listening to *Port*.
+
+##Support: 
 For any issues contact me over Discord: https://discord.com/users/860408741936627714
