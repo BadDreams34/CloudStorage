@@ -1,5 +1,5 @@
 # CloudStorage
-A simple CloudStorage App made with NodeJS and Vanilla JS.
+A simple CloudStorage App made with NodeJS.
 
 ## Demo
 https://drive.google.com/file/d/1mx6HYfoSzWR-jeFHU-YsckYuHHqMu9Yq/view
