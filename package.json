@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "startd": "nodemon script.ts",
+    "setup": "npm install && npx prisma db pull && npx prisma migrate dev",
     "start": "node app.js"
   },
   "keywords": [],
